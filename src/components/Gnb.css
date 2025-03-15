@@ -1,0 +1,102 @@
+.gnb {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  font-size: 10em;
+  font-weight: bold;
+  color: #03c75a;
+  text-decoration: none;
+  margin-right: 50px;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.gnb-left {
+  flex: 1;
+}
+
+.gnb ul {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.gnb a {
+  text-decoration: none;
+  color: #666;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 5px 0;
+}
+
+.gnb a:hover {
+  color: #03c75a;
+}
+
+.gnb a.active {
+  color: #03c75a;
+  font-weight: bold;
+  border-bottom: 2px solid #03c75a;
+}
+
+.gnb-right a {
+  font-size: 13px;
+  color: #888;
+}
+
+.wallet-login-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 20px;
+  color: #495057;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wallet-login-btn:hover {
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.wallet-icon {
+  font-size: 16px;
+}
+
+.gnb-right ul {
+  display: flex;
+  align-items: center;
+}
+
+.gnb nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.gnb nav a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  padding: 0.5rem;
+}
+
+.gnb nav a:hover {
+  color: #fff;
+}
+
+.gnb nav a.active {
+  color: #03c75a;
+} 
