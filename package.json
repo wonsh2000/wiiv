@@ -1,0 +1,61 @@
+{
+  "name": "wiiv",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@reown/appkit": "^1.6.0",
+    "@reown/appkit-adapter-wagmi": "^1.6.0",
+    "@tanstack/react-query": "^5.62.7",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@web3modal/ethereum": "2.7.1",
+    "@web3modal/react": "2.7.1",
+    "@web3modal/wagmi": "^5.1.11",
+    "chart.js": "^4.4.7",
+    "d3": "^7.9.0",
+    "d3-transition": "^3.0.1",
+    "i18next": "^24.1.0",
+    "react": "^19.0.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^19.0.0",
+    "react-i18next": "^15.2.0",
+    "react-router-dom": "^7.0.2",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.4.2",
+    "viem": "^2.21.55",
+    "wagmi": "^2.14.1",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3"
+  }
+}
