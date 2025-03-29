@@ -22,7 +22,7 @@
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -134,17 +134,366 @@
   line-height: 1.6;
 }
 
+.main-slogan {
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin: 1.5rem 0 1rem;
+  background: linear-gradient(45deg, #2196F3, #03c75a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sub-slogan {
+  font-size: 1.4rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
 @media (max-width: 768px) {
-  h1 {
-    font-size: 3rem;
+  .main-slogan {
+    font-size: 2.4rem;
   }
   
-  .subtitle {
+  .sub-slogan {
     font-size: 1.2rem;
   }
   
   .features {
     grid-template-columns: 1fr;
     padding: 40px 20px;
+  }
+}
+
+.roadmap {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.roadmap h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #333;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, #4A90E2 0%, #81C784 100%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-date {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4A90E2;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  z-index: 2;
+  top: -20px;
+}
+
+.timeline-content {
+  width: 45%;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: auto;
+}
+
+.timeline-content h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.timeline-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-content li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  color: #666;
+}
+
+.timeline-content li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #4A90E2;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline-item {
+    flex-direction: column;
+  }
+  
+  .timeline-date {
+    left: 30px;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
+  }
+}
+
+.services {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #333;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 80px;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(45deg, #2196F3, #03c75a);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-card h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.service-card p {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.service-card ul li {
+  color: #555;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.service-card ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #03c75a;
+}
+
+.service-link {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  background: linear-gradient(45deg, #2196F3, #03c75a);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: calc(100% - 60px);
+  text-align: center;
+}
+
+.service-card:hover .service-link {
+  opacity: 1;
+  bottom: 35px;
+}
+
+.service-link .arrow {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.service-link:hover .arrow {
+  transform: translateX(5px);
+}
+
+.service-link:hover {
+  box-shadow: 0 5px 15px rgba(3, 199, 90, 0.3);
+}
+
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .services {
+    padding: 40px 20px;
+  }
+  
+  .service-card {
+    padding: 20px;
+  }
+}
+
+.service-card.coming-soon {
+  background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,249,250,0.9) 100%);
+  border: 2px dashed rgba(3, 199, 90, 0.3);
+}
+
+.service-card.coming-soon::before {
+  background: linear-gradient(45deg, rgba(33, 150, 243, 0.5), rgba(3, 199, 90, 0.5));
+}
+
+.service-card.coming-soon h3 {
+  color: #03c75a;
+}
+
+.service-card.coming-soon p {
+  color: #777;
+}
+
+.service-card.coming-soon ul li {
+  color: #888;
+  font-style: italic;
+}
+
+.coming-soon-link {
+  opacity: 1 !important;
+  background: transparent !important;
+  color: #03c75a !important;
+  font-weight: 600;
+  cursor: default;
+}
+
+.coming-soon-link .dots {
+  display: inline-block;
+  animation: dotAnimation 1.5s infinite;
+}
+
+@keyframes dotAnimation {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-2px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(2px); }
+  100% { transform: translateY(0); }
+}
+
+.service-card.coming-soon:hover {
+  transform: translateY(-5px);
+  border-color: rgba(3, 199, 90, 0.5);
+}
+
+.service-card.coming-soon:hover .coming-soon-link {
+  bottom: 25px !important;
+  box-shadow: none !important;
+}
+
+.roadmap-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+}
+
+.roadmap-description .main-desc {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #03c75a;
+  margin-bottom: 15px;
+  background: linear-gradient(45deg, #2196F3, #03c75a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.roadmap-description .sub-desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .roadmap-description {
+    margin-bottom: 40px;
+  }
+  
+  .roadmap-description .main-desc {
+    font-size: 1.3rem;
+  }
+  
+  .roadmap-description .sub-desc {
+    font-size: 1rem;
   }
 } 
