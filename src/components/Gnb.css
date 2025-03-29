@@ -1,20 +1,59 @@
+/* 최상위 요소의 마진/패딩 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .gnb {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
   display: flex;
   align-items: center;
-  padding: 15px 0;
+  height: 48px;
+  padding: 0 40px;
+  margin: 0;
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gnb-content {
+  display: flex;
+  align-items: center;
   max-width: 1280px;
-  margin: 0 auto;
   width: 100%;
+  margin: 0 auto;
+  height: 100%;
 }
 
 .logo {
-  font-size: 10em;
-  font-weight: bold;
-  color: #03c75a;
+  font-size: 32px !important;
+  font-weight: 900;
+  background: linear-gradient(45deg, #ffffff, #03c75a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
   margin-right: 50px;
-  letter-spacing: -0.5px;
-  line-height: 1;
+  letter-spacing: -1px;
+  line-height: 48px;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
 .gnb-left {
@@ -47,7 +86,11 @@
 
 .gnb-right a {
   font-size: 13px;
-  color: #888;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.gnb-right a:hover {
+  color: #ffffff;
 }
 
 .wallet-login-btn {
@@ -55,10 +98,10 @@
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background-color: #f8f9fa;
-  border: 1px solid #e9ecef;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  color: #495057;
+  color: #ffffff;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -66,8 +109,7 @@
 }
 
 .wallet-login-btn:hover {
-  background-color: #e9ecef;
-  border-color: #dee2e6;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .wallet-icon {
@@ -86,7 +128,7 @@
 }
 
 .gnb nav a {
-  color: #94a3b8;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
@@ -94,9 +136,14 @@
 }
 
 .gnb nav a:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
 .gnb nav a.active {
   color: #03c75a;
+  border-bottom: 2px solid #03c75a;
+}
+
+.app-layout main {
+  padding-top: 48px;
 } 

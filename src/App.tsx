@@ -11,6 +11,7 @@ import { WagmiConfig } from 'wagmi';
 import { arbitrum, mainnet } from 'viem/chains';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Me from './pages/Me';
+import Wallet from './pages/Wallet';
 
 const projectId = 'c844651d96959d2b5108f5947185b231';
 const queryClient = new QueryClient();
@@ -51,9 +52,10 @@ function App() {
                   <Route path="/home" element={<Navigate to="/" replace />} />
                   <Route path="/share" element={<Share />} />
                   <Route path="/tag" element={<Tag />} />
-                  <Route path="/me" element={<Me />} />
                   <Route path="/place" element={<Place />} />
                   <Route path="/space" element={<Space />} />
+                  <Route path="/wallet" element={<Wallet />} />
+                  <Route path="/me" element={<Me />} />
                 </Routes>
               </div>
             </main>

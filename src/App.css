@@ -1,0 +1,9 @@
+.app-layout {
+  margin: 0;
+  padding: 0;
+}
+
+.app-layout main {
+  padding-top: 44px; /* GNB 높이만큼만 패딩 적용 */
+  margin: 0;
+}

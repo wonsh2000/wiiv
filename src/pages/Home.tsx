@@ -1,5 +1,4 @@
 import React from 'react';
-import TVLCirclePacking from '../components/TVLCirclePacking';
 import './Home.css';
 
 const Home: React.FC = () => {
@@ -8,48 +7,43 @@ const Home: React.FC = () => {
       <section className="hero">
         <div className="hero-content">
           <h1>
-            <span className="gradient-text">Web3</span> 
-            <span className="highlight">Social Platform</span>
+            <span className="gradient-text">WIIV</span> 
+            <span className="highlight">Digital Twin Platform</span>
           </h1>
           <p className="subtitle">
-            Share your moments, Tag your memories, Create your space
+            현실과 데이터를 연결하여 새로운 가치를 창출합니다
           </p>
           <div className="cta-buttons">
-            <button className="primary-btn">Start Exploring</button>
-            <button className="secondary-btn">Learn More</button>
+            <button className="primary-btn">시작하기</button>
+            <button className="secondary-btn">더 알아보기</button>
           </div>
         </div>
       </section>
 
-      <section className="tvl-section">
-        <h2>Total Value Locked</h2>
-        <TVLCirclePacking />
-      </section>
-
       <section className="features">
         <div className="feature-card">
-          <div className="feature-icon">🌟</div>
-          <h3>Share</h3>
-          <p>Share your moments with the community</p>
+          <div className="feature-icon">🌍</div>
+          <h3>실시간 연동</h3>
+          <p>실제 세계의 데이터를 실시간으로 수집하고 분석합니다</p>
         </div>
         <div className="feature-card">
-          <div className="feature-icon">🏷️</div>
-          <h3>Tag</h3>
-          <p>Tag and categorize your content</p>
+          <div className="feature-icon">🔄</div>
+          <h3>디지털 트윈</h3>
+          <p>현실과 디지털 세계를 완벽하게 동기화합니다</p>
         </div>
         <div className="feature-card">
-          <div className="feature-icon">🎯</div>
-          <h3>Place</h3>
-          <p>Create and discover unique places</p>
+          <div className="feature-icon">📊</div>
+          <h3>데이터 분석</h3>
+          <p>수집된 데이터를 통해 인사이트를 도출합니다</p>
         </div>
         <div className="feature-card">
-          <div className="feature-icon">🚀</div>
-          <h3>Space</h3>
-          <p>Build your own digital space</p>
+          <div className="feature-icon">💡</div>
+          <h3>가치 창출</h3>
+          <p>분석된 데이터로 새로운 비즈니스 가치를 만듭니다</p>
         </div>
       </section>
     </div>
   );
 };
 
-export default Home; 
+export default Home;
