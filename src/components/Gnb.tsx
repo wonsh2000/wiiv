@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import WalletConnect from './WalletConnect';
 import './Gnb.css';
 
 const Gnb = () => {
@@ -19,7 +18,6 @@ const Gnb = () => {
       <div className="gnb-right">
         <ul>
           <li>
-            <WalletConnect />
           </li>
         </ul>
       </div>
